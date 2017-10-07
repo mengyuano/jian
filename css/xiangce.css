@@ -1,0 +1,157 @@
+#tuce{
+	width:1000px;
+	height:520px;
+}
+.tu{
+	width:192px;
+	height:240px;
+	margin-left:10px;
+	float:left;
+	margin-top:10px;
+	border-radius:15px;
+	position:relative;
+	overflow:hidden;
+	box-sizing:border-box;
+	background:#E6E6E6;
+	
+}
+.tu img{
+	border-radius:15px;
+	transition:all 1s;
+}
+
+.tu img:hover{
+	transform:translateX(-10px)
+}
+.tu p{
+	text-align:center;
+	line-height:240px;
+	font-size:20px;
+	color:black;
+	letter-spacing:10px;
+}
+#heng{
+	width:100%;
+	height:500px;
+	position:relative;
+	margin-top:10px;
+}
+.an,.an1{
+	width:40px;
+	height:60px;
+	background:black;
+	opacity:0.3;
+	position:absolute;
+	top:220px;
+	display:none;
+	color:white;
+	text-align:center;
+	line-height:60px;
+	font-size:50px;
+}
+.an{
+	left:0;
+}
+.an1{
+	right:0;
+}
+.ding{
+	position:absolute;
+	right:30px;
+	bottom:15px;
+}
+.dian{
+	width:300px;
+	height:10px;
+	background:blue;
+	opacity:0.5;
+	float:left;
+	margin-left:20px;
+}
+.tu1{
+	display:none;
+}
+.tu1 img{
+	width:1000px;
+	height:500px;
+	position:absolute;
+}
+.da{
+	width:100%;
+	height:520px;
+	margin-top:40px;
+	position:relative;
+	box-sizing: border-box;
+	background:rgba(220,220,220,0.3);
+	display: none;
+}
+.dingbu{
+	width:100%;
+	height:40px;
+	background:yellowgreen;
+	position: absolute;
+	top:-50px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+	letter-spacing: 10px;
+	color:white;
+	font-weight: 600;
+}
+.zuo{
+	float:left;
+	width:500px;
+}
+.xiao{
+	width:70px;
+	height:100px;
+	background:#C8E3FF;
+	margin-left:70px;
+	margin-top:40px;
+	padding:10px;
+	float:left;
+	position: relative;
+}
+.xiao img{
+	width:70px;
+	height:100px;
+}
+.xiao p{
+	width:5px;
+	height:5px;
+	border-radius: 50%;
+	background:#CC9900;
+	position: absolute;
+	top:2.5px;
+}
+.xiao p:nth-child(3){
+	right:10px;
+}
+.you .xiao{
+	margin-right:20px;
+}
+.tu2{
+	width:330px;
+	height:430px;
+	background:#C8E3FF;
+	float:right;
+	margin-right:40px;
+	margin-top:40px;
+	padding:10px;
+}
+.tu2 img{
+	width:330px;
+	height:430px;
+}
+.heng1{
+	width:350px;
+	height:40px;
+	position: absolute;
+	left:610px;
+	overflow: hidden;
+	font-size: 30px;
+	color:gray;
+}
+.heng1 p{
+	position: absolute;
+}

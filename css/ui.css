@@ -1,0 +1,43 @@
+.pian{
+	width:1000px;
+	height:390px;
+	margin-top:10px;
+}
+.l{
+	width:1000px;
+	background:-webkit-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:-moz-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:-ms-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:linear-gradient(top,#c8e3ff,#88c2fe);
+	margin-top:20px;
+	text-align:center;
+	line-height:80px;
+	font-size:30px;
+	letter-spacing:5px;
+	color:white;
+	float:left;
+	border-radius:10px;
+	box-shadow:0px 1px 5px gray;
+	text-shadow: 0 0 5px gray;
+}
+.tu{
+	display:none;
+}
+.zuo5{
+	float:left;
+}
+.you5{
+	float:right;
+}
+.ce1{
+	width:490px;
+	height:242px;
+	margin-top:20px;
+	margin-bottom:50px;
+}
+.ce2{
+	margin-top:-20px;
+	float:left;
+}
+
+

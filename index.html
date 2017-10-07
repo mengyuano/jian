@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta name="keywords" content="梦圆简历" charset="utf-8">
+<title>个人简历</title>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/toubu.css">
+<script src="jquery-2.1.0.js"></script>
+</head>
+<body>
+<div id="shouye">
+   <div id="zhong">
+      <div id="top"></div>
+      <div id="ding">
+         <div id="dao">
+              <ul>
+               <li>首页</li>
+               <li><a href="xiangce.html">生活日迹</a></li>
+               <li><a href="ziliao.html">个人资料</a></li>
+               <li><a href="zuopin.html">作品展示</a></li>
+               <li><a href="zijian.html">自荐书</a></li>
+             </ul>
+         </div>
+      </div>
+      <div class="de1">
+          <div class='toubu'>
+             <p><b>基本信息</b></p>
+          </div>
+          <div class="ziliao">
+             <div class='kuai' style='margin:0;'>
+                 <p>姓名：</p>
+                 <p>杨梦圆</p>
+                 <p>性别：</p>
+                 <p>男</p>
+                 <p>籍贯：</p>
+                 <p>西安</p>
+                 <p>毕业院校：</p>
+                 <p>西工大</p>
+                 <p>年龄：</p>
+                 <p>20</p>
+                 <p>民族：</p>
+                 <p>汉</p>
+                 <p>婚配：</p>
+                 <p>否</p>
+                 <p>政治面貌：</p>
+                 <p>群众</p>
+             </div>
+             <div class='kuai'>
+                <div class='zuo9'>技能：</div>
+                <div class='you9'>熟练的使用DW、PS、CDR、JS、JQ、CSS样式。对于一些相关软件应用也稍有涉猎，比如ID、绘声绘影、FL、AI、VUE.JS、D3.JS等</div>
+             </div>
+             <div class='kuai'>
+                <div class='zuo9'>性格：</div>
+                <div class='you9'>为人直爽，喜欢结交朋友，喜欢对自己而言陌生的领域，直至克服它，那样会有一种成就及刺激感，会让我血液时常处于一种亢奋的状态。</div>
+             </div>
+             <div class='kuai'>
+                <div class='zuo9'>兴趣：</div>
+                <div class='you9'>喜欢摄影、羽毛球、爬山，曾经给朋友经常说“你哪怕让我去爬山也不要让我和你一起压马路”，爬山的时候山就是目标，促使我一步步走向成功!还挺喜欢一些<span style='color:#c01e1e;'>益智型小游戏及棋类、乒乓球等运动...</sapn></div>
+             </div>
+          </div>
+      	</div>
+     	<div class="dibu"><img src="img/mei/24.jpg"></div>
+   </div>
+</div>
+</body>
+<script type="text/javascript" src="js/xiding.js" ></script>
+<script>
+$(document).scroll(function(){
+	var t=$(this).scrollTop()
+	if(t>=400){
+		$('.deng').show(1000);
+	}else{
+		$('.deng').hide(1000);
+	}
+})
+$('.kuai p:even').css('textAlign','right')
+$('.kuai p:odd').css('textAlign','left')
+$('.you9:eq(2)').css('lineHeight','33px')
+$('.deng li').click(function(){
+	var num=$(this).index();
+	var u=$('.xi').eq(num).offset().top;
+	$('body,document').animate({scrollTop:u-30},700)
+	})
+$('.be').click(function(){
+	$('body,document').animate({scrollTop:0},700)
+	})
+$('.tuwen img:odd').css({'float':'right','marginLeft':'10px'})
+</script>
+</html>

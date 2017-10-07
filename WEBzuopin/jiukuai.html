@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0;padding:0;border:0;}
+div{width:33.3%;height:365px;overflow:hidden;float:left;position:relative;}
+img{height:100%;position:absolute;left:0;transition:all 2s;}
+
+#box:hover img{left:-20px;opacity:0.5;}
+#box p{background:white;position:absolute;left:40px;top:370px;transition:all 2s;}
+#box:hover p{top:300px;}
+
+
+#box1:hover img{left:-20px;opacity:0.5;}
+#box1 p{background:white;position:absolute;left:-140px;top:200px;transition:all 2s linear 0s;}
+#box1:hover p{left:40px;}
+#box1 h{background:white;position:absolute;left:-140px;top:240px;transition:all 2s linear 1s;}
+#box1:hover h{left:40px;}
+
+#box2:hover img{left:-20px;opacity:0.5;}
+#box2 p{background:white;position:absolute;left:0px;top:365px;transition:all 2s;}
+#box2:hover p{top:322px;}
+
+#box3:hover img{opacity:0.5;left:-20px;}
+#box3 div{width:200%;height:200%;background:white;transition:all 2s;position:absolute;left:0;top:100%;}
+#box3:hover div{transform:rotate(-15deg);transform-origin:top left;}
+#box3 li{position:absolute;top:365px;left:280px;transition:all 2s linear 1s;width:60px;list-style:none;}
+#box3:hover li{transform:translate(0px,-50px);}
+
+#box4:hover img{left:-20px;opacity:0.5;}
+#box4 div{width:80%;height:80%;border:1px solid red;position:absolute;left:10%;top:-10%;transition:all 2s linear 0s;}
+#box4:hover div{transform:rotate(360deg);top:10%;}
+#box4 p{position:absolute;left:100px;top:160px;transition:all 2s;color:white;}
+#box4:hover p{top:130px;}
+#box4 h2{position:absolute;left:30px;top:90px;transition:all 2s;color:white;}
+#box4:hover h2{left:80px;}
+
+#box5:hover img{left:-20px;opacity:0.5;}
+#box5 p{width:80%;position:absolute;left:40px;top:50px;transition:all 2s;color:white;font-size:27px;transform:skewX(90deg);}
+#box5:hover p{transform:skewX(0deg);}
+
+#box6:hover img{opacity:0.5;transform:scale(1.1,1.1);}
+#box6 h{position:absolute;left:100px;top:90px;transition:all 2s;color:white;font-size:27px;}
+#box6:hover h{left:100px;}
+#box6 div{width: 70%;height:70%;border: 2px solid #fff;left:15%;top:15%;transition:all 1s linear 0.5s;}
+#box6:hover div{transform:scale(0.9,0.9);}
+
+#box7:hover img{left:-20px;opacity:0.5;}
+#en{width:70%;height:0;left:15%;top:50%;border:1px solid #fff;border-top:0;border-bottom:0;transition:all 2s;position:absolute;}
+#box7:hover #en{height:80%;top:10%;}
+#en1{width:0;height:70%;left:50%;top:15%;border:1px solid #fff;border-right:0;border-left:0;transition:all 2s;position:absolute;}
+#box7:hover #en1{width:80%;left:10%;}
+#box7 h2{color:white;position:absolute;left:20px;top:60px;transition:all 2s;}
+#box7:hover h2{left:80px;}
+
+#box8:hover img{left:-20px;opacity:0.5;}
+</style>
+<body>
+<div id=box>
+    <img src="../img/mei/pic1.jpg">
+    <p>我是文字</p>
+</div>
+<div id=box1>
+    <img src="../img/mei/pic2.jpg">
+    <p>我是文字</p>
+    <h>库萨克饰打算打算</h>
+</div>
+<div id=box2>
+    <img src="../img/mei/pic3.jpg">
+    <p>我是文看见了盛大积分卡拉斯的缴费卡士大夫阿斯顿飞加拉斯柯达将飞洒多刷卡的风景阿斯顿字</p>
+</div>
+<div id=box3>
+    <img src="../img/mei/pic4.jpg">
+    <div></div>
+         <li>开心1</li>
+         <li style="margin-left:60px;">开心2</li>
+</div>
+<div id=box4>
+    <div></div>
+    <img src="../img/mei/pic5.jpg">
+    <h2>旋转飞入</h2>
+	<p>通过旋转和位移</p>
+</div>
+<div id=box5>
+    <img src="../img/mei/pic6.jpg">
+    <p>我是文字将三大暗粉色 撒地方就爱上来的阿斯达克发送到卡卡是大家发生</p>
+</div>
+<div id=box6>
+    <img src="../img/mei/pic7.jpg">
+    <h>缩放</h>
+    <div></div>
+</div>
+<div id=box7>
+    <img src="../img/mei/pic8.jpg">
+    <div id="en"></div>
+    <div id="en1"></div>
+    <h2>绘制线条效果</h2>
+</div>
+<div id=box8>
+    <img src="../img/mei/pic9.jpg">
+</div>
+</body>
+</html>

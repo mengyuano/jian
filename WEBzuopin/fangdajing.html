@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0;padding:0;border:0;}
+#box {
+	width: 200px;
+	height: 200px;
+	margin: 50px;
+	position: relative;
+}
+#box1 {
+	width: 200px;
+	height: 200px;
+	background: url("../img/mei/20.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#box2 {
+	width: 100px;
+	height: 100px;
+	background: red;
+	opacity: 0.2;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display:none;
+}
+#fu {width: 400px;
+	height: 400px;
+	position: absolute;
+	left: 400px;
+	top: 50px;
+	overflow:hidden;
+	display:none;
+	border:1px solid red;
+	}
+#yu {position: absolute;
+	left:0;
+	top:0;
+	
+}
+</style>
+</head>
+
+<body>
+<div id="box">
+  <div id="box1"></div>
+  <div id="box2"></div>
+</div>
+<div id="fu">
+   <img src="../img/mei/20.jpg" id="yu">
+</div>
+</body>
+<script type="text/javascript">
+ var t=document.getElementById("box2");
+ var r=document.getElementById("fu");
+ var u=document.getElementById("box");
+ var e=document.getElementById("yu")
+ u.onmouseover=function(){
+	 r.style.display="block";
+	 t.style.display="block"
+	 }
+ u.onmouseout=function(){
+	 r.style.display="none";
+	 t.style.display="none"
+ }
+u.onmousemove=function(){
+	var ev=ev||event;
+	var a=ev.pageX-u.offsetLeft-t.offsetWidth/2;
+	var b=ev.pageY-u.offsetTop-t.offsetHeight/2;
+	if(a<0){a=0;}
+	if(a>u.offsetWidth-t.offsetWidth){a=u.offsetWidth-t.offsetWidth;}
+	if(b<0){b=0;}
+	if(b>u.offsetWidth-t.offsetHeight){b=u.offsetWidth-t.offsetHeight;}
+	t.style.top=b+"px";
+	t.style.left=a+"px";
+	var xo=a*4;
+	var yo=b*4;
+    e.style.left=-xo+"px";
+	e.style.top=-yo+"px";
+}
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+body{margin:0;padding:0;background:rgba(80,12,32,0.3);}
+</style>
+</head>
+
+<body>
+
+<input type="range" max="255" min="1" step="1" value="56"/><span>56</span>
+<input type="range" max="255" min="1" step="1" value="56"/><span>56</span>
+<input type="range" max="255" min="1" step="1" value="56"/><span>56</span>
+<input type="range" max="1" min="0" step="0.1" value="0.2"/><span>0.2</span>
+</body>
+<script type="text/javascript">
+var biao=document.querySelectorAll('input');
+var red=biao[0].value;
+var green=biao[1].value;
+var blue=biao[2].value;
+var ne=biao[3].value;
+fun();
+function fun(){
+	document.body.style.background="rgba("+red+","+green+","+blue+","+ne+")";
+		
+	}
+	    biao[0].oninput=function(){
+		red=this.value;
+		this.nextElementSibling.innerHTML = this.value;
+		fun()
+		}
+		biao[1].oninput=function(){
+		green=this.value;
+		this.nextElementSibling.innerHTML = this.value;
+		fun()
+		}
+		biao[2].oninput=function(){
+		blue=this.value;
+		this.nextElementSibling.innerHTML = this.value;
+		fun()
+		}
+		biao[3].oninput=function(){
+		ne=this.value;
+		this.nextElementSibling.innerHTML = this.value;
+		fun()
+		}
+</script>
+</html>

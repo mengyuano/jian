@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/yan1.css"/>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript" src="../jquery-2.1.0.js" ></script>
+	<script>
+	    $('body').on('mousemove',function  (eve) {
+			var eve1 = eve || event;
+			var point = {
+				pointX:eve1.clientX,
+				pointY:eve1.clientY
+			}
+			var spark = new Spark(point);
+			$("body").append(spark.element);
+			spark.show();
+			spark.move();
+	    }) 
+	function Spark (a) {
+		this.element = $('<div class="spark"></div>');
+		this.show = function  () {
+			var u=Math.floor(Math.random()*20)
+			this.element.css({
+				left:a.pointX,
+				top:a.pointY,
+				background: "#" + Math.floor(Math.random() * 0xffffff).toString(16),
+				width:u,
+				height:u
+			})
+		}
+		this.vSpeed = Math.floor(Math.random()*80+10)*((Math.random()>0.5)?1:(-1));
+		this.hSpeed = Math.floor(Math.random()*80+10)*((Math.random()>0.5)?1:(-1));
+		this.move = function () {
+			var that = this;
+			var timer = setInterval(mu,100)
+			function mu () {
+				if(that.element.offset().top > $("html").height() -100||
+				that.element.offset().top < 100 ||
+				that.element.offset().left > $("html").width()-100 ||
+				that.element.offset().left < 100){
+					clearInterval(timer);
+					that.element.remove();
+				}
+				that.element.css({
+					left:that.element.offset().left+that.vSpeed,
+					top:that.element.offset().top+that.hSpeed
+				})
+			}
+		}
+	}
+	</script>
+</html>

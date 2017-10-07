@@ -1,0 +1,21 @@
+.da{
+	width:100%;
+	background:white;
+	box-shadow: 0px 5px 20px #ccc;
+	margin-top:10px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.da p{
+	width:100%;
+	text-indent: 2em;
+	font-size: 20px;
+	font-weight: 600;
+	margin-top:10px;
+}
+.da p:nth-child(1){
+	text-indent:0;
+}
+.da p:nth-child(8),.da p:nth-child(9){
+	text-align: right;
+}

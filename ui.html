@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/toubu.css">
+<link rel="stylesheet" href="css/ui.css">
+<script src="jquery-2.1.0.js"></script>
+<script type="text/javascript" src="js/xiding.js" ></script>
+</head>
+
+<body>
+<div id="shouye">
+   <div id="zhong">
+      <div id="top"></div>
+      <div id="ding">
+         <div id="dao">
+              <ul>
+               <li style="margin:0;"><a href="index.html">首页</a></li>
+               <li><a href="xiangce.html">生活日迹</a></li>
+               <li><a href="ziliao.html">个人资料</a></li>
+               <li><a href="zuopin.html">作品展示</a></li>
+               <li><a href="zijian.html">自荐书</a></li>
+             </ul>
+         </div>
+      </div>
+     <div class="pian">
+          <div class='l' style='margin:0;'>
+              <span>Phoposhop作品</span>
+              <div class="tu">
+                  <div class='ce2'><img src="img/zuopin/6.jpg"></div>
+                  <div class='ce2'><img src="img/zuopin/5.jpg"></div>
+              </div>
+          </div>
+          <div class='l'>
+              <span>Illustrator作品</span>
+              <div class="tu">
+                  <div class='zuo5'>
+                     <div class='ce1' style="margin-bottom:0;">
+                     <img src='img/zuopin/22.jpg'></div>
+                     <div class='ce1' ><img src='img/zuopin/23.jpg'></div>
+                  </div>
+                  <div class='you5'>
+                     <div class='ce1' style="margin-bottom:0;">
+                     <img src='img/zuopin/24.jpg'></div>
+                     <div class='ce1'><img src='img/zuopin/25.jpg'></div>
+                  </div>
+              </div>
+          </div>
+          <div class='l'>
+              <span>CorelDraw作品</span>
+          </div>
+          <div class='l'>
+              <a href="zuopin.html">
+                  <p>返回</p>
+              </a>
+          </div>
+      </div>
+      <div class="dibu"><img src="img/mei/24.jpg"></div>
+   </div>
+</div>
+</body>
+<script>
+$('.l').click(function(){
+	$('.tu').eq($(this).index()).slideToggle(1000);
+	})
+$('.ce2').eq(1).css('float','right')
+</script>
+</html>

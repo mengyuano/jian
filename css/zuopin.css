@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+.pian{
+	width:1000px;
+	height:100px;
+	margin-top:10px;
+}
+.web{
+	width:1000px;
+	height:100px;
+	background:-webkit-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:-moz-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:-ms-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:linear-gradient(top,#c8e3ff,#88c2fe);
+	border-radius:20px;
+}
+p{
+	text-align:center;
+	line-height:100px;
+	color:white;
+	font-weight:600;
+	font-size:30px;
+	opacity:0.9;
+	letter-spacing:10px;
+}
+.box{
+	width:1000px;
+	height:260px;
+	margin-top:10px;
+	position: relative;
+}
+.box p{
+	width:305px;
+	height:100px;
+	background:white;
+	margin-top:20px;
+	margin-left:40px;
+	border-radius:20px;
+	box-shadow:0px 1px 10px #ccc;
+	text-align:center;
+	line-height:100px;
+	font-size:20px;
+	color:black;
+	float:left;
+	letter-spacing:5px;
+	transition: all 0.5s;
+}
+.box p:hover{
+	background:yellowgreen;
+}
+.ui{
+	width:1000px;
+	height:100px;
+	background:-webkit-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:-moz-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:-ms-linear-gradient(top,#c8e3ff,#88c2fe);
+	background:linear-gradient(top,#c8e3ff,#88c2fe);
+	border-radius:20px;
+	margin:10px auto;
+}

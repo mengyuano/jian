@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body>
+		<form action="">
+			<label for="username">注册用户名&nbsp;：</label>
+			<input type="text" name="username" id="username" value="" /><br/>
+			<label for="password">输入注册密码：</label>
+			<input type="text" name="password1" id="password1" value="" /><br/>
+			<label for="password1">再次输入密码：</label>
+			<input type="text" name="password2" id="password2" value="" /><br/>
+			<input type="button" id="zhuce" value="注册" />
+			<input type="reset" value="清空" /><br/>
+		</form>
+
+		<form action="">
+			<label for="username1">请输入用户名&nbsp;：</label>
+			<input type="text" name="username1" id="username1" value="" /><br/>
+			<label for="password2">请输入输入密码：</label>
+			<input type="password" name="password3" id="password3" value="" /><br/>
+			<input type="button" id="denglu" value="登录" />
+			<input type="reset" value="清空" />
+			<input type="button" id="qingchu" value="清除本地数据" />
+		</form>
+	</body>
+	<script>
+		var username = document.getElementById("username"); //获取注册时输入的用户名    
+		var password1 = document.getElementById("password1"); //获取注册时输入的密码
+		var password2 = document.getElementById("password2"); //获取注册时的第二次输入的密码
+		var zhuce = document.getElementById("zhuce"); //获取注册按钮
+
+		var username1 = document.getElementById("username1"); //获取登录时输入的用户名    
+		var password3 = document.getElementById("password3"); //获取登录时输入的密码
+		var denglu = document.getElementById("denglu"); //获取登录按钮  
+		var qingchu = document.getElementById("qingchu"); //获取清除按钮
+
+		zhuce.onclick = function() { //注册按纽点击事件
+			if(username.value == "" || password1.value == "" || password2.value == "") { //判断是否有空值
+				alert("用户名或密码不能为空");
+			} else if(password1.value != password2.value) { //判断注册时两次密码是否输入一致
+				alert("两次密码输入不一致");
+			} else {
+				localStorage.setItem("un", username.value); //将注册用户的值存进本地名为un的键值中
+				localStorage.setItem("pw", password1.value); //将注册密码的值存进本地名为pw的键值中
+				alert("注册成功！"); //提示注册成功
+				username.value = "";//清除注册用户名框内容
+				password1.value = "";//清除注册密码1框内容
+				password2.value = "";//清除注册密码2框内容
+			}
+		}
+		console.log(localStorage.getItem("pw"))
+		denglu.onclick = function() { //登录按钮点击事件
+			if(username1.value == "" || password3 == "") {//判断是否有空值
+				alert("用户名或密码不能为空");//有一个值为空，则弹出
+			} else if(username1.value != localStorage.getItem("un") || password3.value != localStorage.getItem("pw")) {//判断输入的用户名和密码是否与注册时的一致
+				alert("用户名或密码错误;")//有一个值错误，则弹出
+			} else{//则输入的用户名和密码一致
+				alert("登录成功");//都相同，则成功
+				username1.value = "";//清除登录用户名框内容
+				password3.value = "";//清除登录密码框内容
+			}
+		}
+
+		qingchu.onclick = function() {//清除本地数据点击事件
+			localStorage.clear();//清除所有本地数据方法
+			/*
+			 localStorage.clear():清除所有本地数据
+			 localStorage.removeItem(key);清除对应key的数据
+			 
+			 sessionStorage.clear();清除当前页面所有数据
+			 sessionStorage.removeItem(key);清除对应key的数据
+			 * */
+			username1.value = "";//清除登录用户名框内容
+			password3.value = "";//清除登录密码框内容
+		}
+	</script>
+
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <title>中秋节快乐</title>
+  <style>
+* {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body{
+	background:black;
+	perspective:1200px;
+}
+#da {
+	width: 200px;
+	height: 300px;
+	margin: 300px auto;
+}
+ul {
+	position: relative;
+	transition:all 3s linear;
+	transform-style:preserve-3d;
+}
+li {
+	position: absolute;
+}
+img {
+	width: 200px;
+	height: 300px;
+}
+li:nth-child(1){
+	transform:rotateY(45deg) translateZ(380px);
+}
+li:nth-child(2){
+	transform:rotateY(90deg) translateZ(380px);
+}
+li:nth-child(3){
+	transform:rotateY(135deg) translateZ(380px);
+}
+li:nth-child(4){
+	transform:rotateY(180deg) translateZ(380px);
+}
+li:nth-child(5){
+	transform:rotateY(225deg) translateZ(380px);
+}
+li:nth-child(6){
+	transform:rotateY(270deg) translateZ(380px);
+}
+li:nth-child(7){
+	transform:rotateY(315deg) translateZ(380px);
+}
+li:nth-child(8){
+	transform:rotateY(360deg) translateZ(380px);
+}
+
+</style>
+  </head>
+  <body>
+  <div id="da">
+    <ul>
+      <li><img src="../img/mei/111.jpg"></li>
+      <li><img src="../img/mei/222.jpg"></li>
+      <li><img src="../img/mei/333.jpg"></li>
+      <li><img src="../img/mei/444.jpg"></li>
+      <li><img src="../img/mei/555.jpg"></li>
+      <li><img src="../img/mei/666.jpg"></li>
+      <li><img src="../img/mei/777.jpg"></li>
+      <li><img src="../img/mei/888.jpg"></li>
+    </ul>
+  </div>
+</body>
+  <script>
+  var startX;
+  var startY;
+  var endX;
+  var endY;
+  var mul = document.querySelector("ul");
+	 document.onmousedown=function(ev){
+		 var ev=ev||event;
+		 startX = ev.pageX;
+		 startY = ev.pageY;
+	} 
+	 document.onmouseup=function(ev){
+		 var ev=ev||event;
+		 endX = ev.pageX;
+		 endY = ev.pageY;
+		 mul.style = "transform:rotateY("+parseInt(endX-startX)+"deg) rotateX("+parseInt(endY-startY)+"deg)";
+	}
+ </script>
+</html>
